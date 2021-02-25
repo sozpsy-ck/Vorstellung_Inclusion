@@ -23,7 +23,7 @@ $(function() {
 	// If the study is called with a parameter for redirection, as explained in the documentation, this value is overwritten. 
 	// To the redirect link, the following information will be appended: (1) participant number, (2) condition, (3) username, (4) description submitted by participant. These variables can be extracted from the link, saved as data, and used for linking the Social Media Ostracism paradigm to subsequent tasks and measures. See documentation for more details.
 
-    settings.defaultredirect = 'http://fppvu.qualtrics.com/SE/?SID=SV_a9u9MdnpIRuxctT';
+    settings.defaultredirect = 'https://www.soscisurvey.de/Ostra_GP2/';
 
 	
 	// **Tasklength**     
@@ -363,12 +363,13 @@ $(function() {
 
     // the number of likes a person receives depends on the condition
 	// in addition, the number of likes another person receives is adjusted, so that there is the same number of likes overall
+	//CK: Ich werde versuchen an dieser Stelle case 1 und 2 zu tauschen, um zu schauen, ob das schon reicht, um die Bedingung anzupassen
 	switch(condition) {
-		case 1:
+		case 2:
 			window.settings.condition_likes = settings.condition_1_likes;
 			window.others.posts[1].likes = settings.condition_1_adjusted_likes;
 			break;
-		case 2:
+		case 1:
 			window.settings.condition_likes = settings.condition_2_likes;
 			window.others.posts[1].likes = settings.condition_2_adjusted_likes;
 			break;
